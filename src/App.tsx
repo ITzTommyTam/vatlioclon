@@ -1314,6 +1314,15 @@ export default function App() {
                 src={sourceImageModal.url}
                 alt={sourceImageModal.title}
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const currentSrc = e.currentTarget.getAttribute('src') || '';
+                  if (!currentSrc.includes('public/assets/')) {
+                    const fileName = currentSrc.split('/').pop();
+                    if (fileName) {
+                      e.currentTarget.src = `./public/assets/aistudio/${fileName}`;
+                    }
+                  }
+                }}
                 className="max-h-[75vh] w-auto rounded object-contain"
               />
             </div>

@@ -15,7 +15,30 @@
   </head>
   <body class="bg-[#F8FAFC] text-[#0F172A] antialiased selection:bg-sky-100 selection:text-sky-900">
     <div id="root"></div>
-    <script type="module" src="./src/main.tsx"></script>
+    <script>
+      window.__loadStaticFallback = function () {
+        if (window.__VATLI_APP_LOADED__ || window.__VATLI_FALLBACK_LOADING__) return;
+        window.__VATLI_FALLBACK_LOADING__ = true;
+        var css = document.createElement('link');
+        css.rel = 'stylesheet';
+        css.href = './app-bundle.css';
+        document.head.appendChild(css);
+        var script = document.createElement('script');
+        script.type = 'module';
+        script.src = './app-bundle.js';
+        document.body.appendChild(script);
+      };
+    </script>
+    <script type="module" src="./src/main.tsx" onerror="window.__loadStaticFallback()"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function () {
+          if (!window.__VATLI_APP_LOADED__) {
+            window.__loadStaticFallback();
+          }
+        }, 350);
+      });
+    </script>
   </body>
 </html>
 
