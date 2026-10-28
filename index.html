@@ -21,13 +21,16 @@
         window.__VATLI_FALLBACK_LOADING__ = true;
         var css = document.createElement('link');
         css.rel = 'stylesheet';
-        css.href = './app-bundle.css';
+        css.href = './app-bundle.css?v=4';
         document.head.appendChild(css);
         var script = document.createElement('script');
         script.type = 'module';
-        script.src = './app-bundle.js';
+        script.src = './app-bundle.js?v=4';
         document.body.appendChild(script);
       };
+      if (window.location.hostname.indexOf('github.io') !== -1 || window.location.protocol === 'file:') {
+        window.__loadStaticFallback();
+      }
     </script>
     <script type="module" src="./src/main.tsx" onerror="window.__loadStaticFallback()"></script>
     <script>
@@ -36,9 +39,8 @@
           if (!window.__VATLI_APP_LOADED__) {
             window.__loadStaticFallback();
           }
-        }, 350);
+        }, 1500);
       });
     </script>
   </body>
 </html>
-
