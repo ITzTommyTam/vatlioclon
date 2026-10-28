@@ -1,0 +1,6 @@
+{
+  "name": "Vật Lí Nhiệt 12 — Ôn Tập Chương 1",
+  "description": "Hệ thống ôn luyện 75 câu trắc nghiệm nhiều lựa chọn và 13 câu trắc nghiệm Đúng - Sai môn Vật Lí 12 Chương 1: Vật Lí Nhiệt kèm giải thích chi tiết và thống kê điểm số.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
