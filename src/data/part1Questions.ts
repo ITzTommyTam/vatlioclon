@@ -1,14 +1,16 @@
 import { MultipleChoiceQuestion } from '../types/quiz';
 
+const BASE_URL = import.meta.env.BASE_URL || './';
+
 const PAGE_IMAGES: Record<number, string> = {
-  11: '/assets/aistudio/2aOboR8hcbE6MmMdGq2hddG2bqjaLqNwBemL2CfY_936081a6.jpg',
-  12: '/assets/aistudio/2aOboR8hcclKItcftnMLNgTSOTX09i15bzTm4apM_0488d725.jpg',
-  13: '/assets/aistudio/2aOboR8hcbwryGjAalKfoDq7P52Qt0XS3PPLyVlI_065719bb.jpg',
-  14: '/assets/aistudio/2aOboR8hccLJU9LLB7rgiDFVJCjzOagPNjApfDpA_9bbbc244.jpg',
-  15: '/assets/aistudio/2aOboR8hcdJBdyDpHzfCsZRtrmwaiTtowu0ElAIK_f29f8d13.jpg',
-  16: '/assets/aistudio/2aOboR8hcbZU8ZXEb0OohKcW2WWM9W2SRxcEvtVA_9b249252.jpg',
-  17: '/assets/aistudio/2aOboR8hcfhh3sAfSvwGyLwE9AHVfM3WFYwwYTY0_ca59788e.jpg',
-  18: '/assets/aistudio/2aOboR8hcdtiOuqkuJP3mNSoBpjcONMbgWOaFuDo_f51111c1.jpg',
+  11: `${BASE_URL}assets/aistudio/2aOboR8hcbE6MmMdGq2hddG2bqjaLqNwBemL2CfY_936081a6.jpg`,
+  12: `${BASE_URL}assets/aistudio/2aOboR8hcclKItcftnMLNgTSOTX09i15bzTm4apM_0488d725.jpg`,
+  13: `${BASE_URL}assets/aistudio/2aOboR8hcbwryGjAalKfoDq7P52Qt0XS3PPLyVlI_065719bb.jpg`,
+  14: `${BASE_URL}assets/aistudio/2aOboR8hccLJU9LLB7rgiDFVJCjzOagPNjApfDpA_9bbbc244.jpg`,
+  15: `${BASE_URL}assets/aistudio/2aOboR8hcdJBdyDpHzfCsZRtrmwaiTtowu0ElAIK_f29f8d13.jpg`,
+  16: `${BASE_URL}assets/aistudio/2aOboR8hcbZU8ZXEb0OohKcW2WWM9W2SRxcEvtVA_9b249252.jpg`,
+  17: `${BASE_URL}assets/aistudio/2aOboR8hcfhh3sAfSvwGyLwE9AHVfM3WFYwwYTY0_ca59788e.jpg`,
+  18: `${BASE_URL}assets/aistudio/2aOboR8hcdtiOuqkuJP3mNSoBpjcONMbgWOaFuDo_f51111c1.jpg`,
 };
 
 export const PART_1_QUESTIONS: MultipleChoiceQuestion[] = [

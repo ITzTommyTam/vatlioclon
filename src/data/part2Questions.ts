@@ -1,9 +1,11 @@
 import { TrueFalseQuestion } from '../types/quiz';
 
+const BASE_URL = import.meta.env.BASE_URL || './';
+
 const PAGE_IMAGES: Record<number, string> = {
-  18: '/assets/aistudio/2aOboR8hcdtiOuqkuJP3mNSoBpjcONMbgWOaFuDo_f51111c1.jpg',
-  19: '/assets/aistudio/2aOboR8hcf2qiXy2Tm3PDTKg1FXFKcr7yugsFLrk_e69c1395.jpg',
-  20: '/assets/aistudio/2aOboR8hceTQ4bhixGmtx6TAuQBVFCvwtmOC8AFs_3319091d.jpg',
+  18: `${BASE_URL}assets/aistudio/2aOboR8hcdtiOuqkuJP3mNSoBpjcONMbgWOaFuDo_f51111c1.jpg`,
+  19: `${BASE_URL}assets/aistudio/2aOboR8hcf2qiXy2Tm3PDTKg1FXFKcr7yugsFLrk_e69c1395.jpg`,
+  20: `${BASE_URL}assets/aistudio/2aOboR8hceTQ4bhixGmtx6TAuQBVFCvwtmOC8AFs_3319091d.jpg`,
 };
 
 export const PART_2_QUESTIONS: TrueFalseQuestion[] = [
